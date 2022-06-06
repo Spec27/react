@@ -1,16 +1,23 @@
-import PantingList from "./components/PantingList";
-import Section from "./components/Section";
-import panting from "./pantings.json";
+import React, { Component } from 'react';
+import Form from './components/Form/Form.jsx';
+import Panting from './components/Panting/Panting.jsx';
 
-export default function App() {
-  return (
-    <div>
-      <Section title="Топ неділі">
-        <PantingList items={panting} />
-      </Section>
-      <Section title="Популярне">
-        <PantingList items={panting} />
-      </Section>
-    </div>
-  );
+class App extends Component {
+  state = {
+    todos: 'initialTodos',
+  };
+  formSubmitHeandler = data => {
+    console.log(data);
+  };
+
+  render() {
+    return (
+      <div>
+        <Form onSubmit={this.formSubmitHeandler} />
+        <Panting />
+      </div>
+    );
+  }
 }
+
+export default App;
