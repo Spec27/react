@@ -80,14 +80,13 @@ class Form extends Component{
                         <input className={s.Checkbox}
                             type="checkbox"
                             name='licence'
-                            hecked={this.state.licence}
+                            сhecked={this.state.licence}
                             onChange={this.hendleLicenceChange}
                             id={this.licenceCheckboxId} />
                         <span className={s.CheckboxSpan}> Даю згоду на обробку даних</span> 
                 </label>
                 <br />
                 <button className={s.Btn} type="submit" disabled={!this.state.licence}>Відправити</button>
-
                 </form>
                 </div>
         );
