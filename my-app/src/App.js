@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Form from './components/Form/Form.jsx';
+/* import Form from './components/Form/Form.jsx'; */
+import FormHooks from './components/FormHooks/FormHooks.jsx';
 
 class App extends Component {
   state = {
@@ -12,7 +13,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Form onSubmit={this.formSubmitHeandler} />
+        {/* <Form onSubmit={this.formSubmitHeandler} /> */}
+        <FormHooks />
       </div>
     );
   }
